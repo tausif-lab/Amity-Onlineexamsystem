@@ -1,0 +1,673 @@
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Online Exam System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/student.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-graduation-cap me-2"></i>
+                Online Exam System
+            </a>
+            <div class="navbar-nav ms-auto">
+                <span class="navbar-text me-3">
+                    <i class="fas fa-user-circle me-1"></i>
+                    Welcome, <span id="userName" class="fw-bold"></span>
+                </span>
+                <button class="btn btn-outline-danger btn-sm" onclick="logout()">
+                    <i class="fas fa-sign-out-alt me-1"></i>
+                    Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-header">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h1><i class="fas fa-tachometer-alt me-2"></i>Student Dashboard</h1>
+                    <p>CSPDCL Vocational Training Online Exam System</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card exam-card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-clipboard-list"></i>
+                            <h5 class="card-title">Available Exams</h5>
+                            <p class="card-text">Take your vocational training exams and test your knowledge</p>
+                        </div>
+                        <div class="flex-grow-1">
+                            <div id="examsList">
+                                <div class="text-center">
+                                    <div class="spinner-border spinner-border-sm text-white" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                    <p class="mt-2 mb-0">Loading exams...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card result-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="flex-grow-1">
+                            <i class="fas fa-chart-bar"></i>
+                            <h5 class="card-title">My Results</h5>
+                            <p class="card-text">Check your exam results and track your performance</p>
+                        </div>
+                        <button class="btn btn-light mt-auto" onclick="viewResults()">
+                            <i class="fas fa-chart-line me-2"></i>View Results
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card profile-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="flex-grow-1">
+                            <i class="fas fa-user-cog"></i>
+                            <h5 class="card-title">Profile</h5>
+                            <p class="card-text">Manage your profile and view your statistics</p>
+                        </div>
+                        <button class="btn btn-light mt-auto" onclick="viewProfile()">
+                            <i class="fas fa-user me-2"></i>View Profile
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card activity-card">
+                    <div class="card-header bg-transparent">
+                        <h5 class="mb-0">
+                            <i class="fas fa-history me-2"></i>Recent Activity
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="recentActivity">
+                            <div class="text-center">
+                                <div class="spinner-border spinner-border-sm text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="text-muted mt-2">Loading recent activity...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card activity-card">
+                    <div class="card-header bg-transparent">
+                        <h5 class="mb-0">
+                            <i class="fas fa-bullhorn me-2"></i>Announcements
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info border-0 mb-0">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="fas fa-info-circle fa-2x text-info"></i>
+                                </div>
+                                <div>
+                                    <h6 class="alert-heading">Welcome to CSPDCL Vocational Training Online Exam System!</h6>
+                                    <p class="mb-0">
+                                        Make sure to complete your exams within the given time limit. 
+                                        Read all questions carefully before selecting your answers.
+                                        Good luck with your examinations!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5 py-4">
+        <div class="container text-center">
+            <p class="text-white-50 mb-0">
+                &copy; 2025 CSPDCL Vocational Training Online Exam System. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="shared/student.js"> </script>
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Online Exam System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg,#F5F9FF 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background: #4A90E2;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid white;
+        }
+
+        .dashboard-header {
+            background: linear-gradient(135deg, #4A90E2 20%, #2D6CDF 80%);
+            color: white;
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .dashboard-header h1 {
+            color: white;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+
+        .dashboard-header p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .card:hover {
+            /*transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);*/
+            border: 1px solid #4A90E2;                 /* Light accent border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);/* Slightly deeper shadow */
+        }
+
+      /*  .exam-card {
+            background: linear-gradient(135deg, #dacaca 0%, #c9c7cb 100%);
+            color: white;
+            
+
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .profile-card {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+
+        .exam-card .btn, .result-card .btn, .profile-card .btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .exam-card .btn:hover, .result-card .btn:hover, .profile-card .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .card-title i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .activity-card {
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .exam-id-input {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+        }
+
+        .exam-id-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .exam-id-input:focus {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            color: white;
+            box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+        }*/
+        .exam-card {
+    background: linear-gradient(135deg, #4A90E2 0%, #2D6CDF 100%);
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+}
+
+.result-card {
+    background: linear-gradient(135deg, #E9F0FA 0%, #D1E7F7 100%);
+    color: #2D6CDF;
+    border: 2px solid #4A90E2;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.15);
+}
+
+.profile-card {
+    background: linear-gradient(135deg, #F5F9FF 0%, #E9F0FA 100%);
+    color: #4A90E2;
+    border: 2px solid #4A90E2;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(45, 108, 223, 0.2);
+}
+
+/* Button styles for exam card (white text) */
+.exam-card .btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    backdrop-filter: blur(15px);
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.exam-card .btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Button styles for result card (blue text) */
+.result-card .btn {
+    background: #4A90E2;
+    border: 2px solid #4A90E2;
+    color: white;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.result-card .btn:hover {
+    background: #2D6CDF;
+    border-color: #2D6CDF;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(45, 108, 223, 0.3);
+}
+
+/* Button styles for profile card (blue text) */
+.profile-card .btn {
+    background: transparent;
+    border: 2px solid #4A90E2;
+    color: #4A90E2;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.profile-card .btn:hover {
+    background: #4A90E2;
+    color: white;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+}
+
+.card-title i {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    opacity: 0.9;
+}
+
+.activity-card {
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(74, 144, 226, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.exam-id-input {
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+}
+
+.exam-id-input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.exam-id-input:focus {
+    background: rgba(255, 255, 255, 0.35);
+    border-color: rgba(255, 255, 255, 0.7);
+    color: white;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.3);
+    outline: none;
+    transform: translateY(-1px);
+}
+
+.form-check {
+    margin-bottom: 0.75rem;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.form-check:hover {
+    background-color: rgba(74, 144, 226, 0.08);
+    border-color: rgba(74, 144, 226, 0.2);
+    transform: translateX(4px);
+}
+
+.form-check-input:checked {
+    background-color: #4A90E2;
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+.form-check-input:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+/* Additional enhancements for better theme integration */
+.card-hover-effect {
+    transition: all 0.3s ease;
+}
+
+.card-hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(74, 144, 226, 0.2);
+}
+
+/* Smooth animations */
+@keyframes softPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.pulse-animation {
+    animation: softPulse 2s infinite ease-in-out;
+}
+
+/* Custom scrollbar to match theme */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5F9FF;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4A90E2;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2D6CDF;
+}
+
+
+        .form-check {
+            margin-bottom: 0.75rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+        }
+
+        .form-check:hover {
+            background-color: rgba(0, 123, 255, 0.1);
+        }
+
+        .form-check-input:checked {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .timer-display {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .badge {
+            font-size: 0.8rem;
+        }
+
+        .progress {
+            height: 10px;
+            border-radius: 5px;
+        }
+
+        .bg-light-success {
+            background-color: rgba(25, 135, 84, 0.1) !important;
+        }
+
+        .bg-light-danger {
+            background-color: rgba(220, 53, 69, 0.1) !important;
+        }
+
+        .table th {
+            border-top: none;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .btn-outline-primary:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-header {
+                padding: 1rem 0;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-white" href="#">
+            <i class="fas fa-graduation-cap me-2 text-white"></i>
+            Online Exam System
+        </a>
+        <div class="navbar-nav ms-auto">
+            <span class="navbar-text me-3 text-white">
+                <i class="fas fa-user-circle me-1 text-white"></i>
+                Welcome, <span id="userName" class="fw-bold text-white"></span>
+            </span>
+            <button class="btn btn-outline-light btn-sm text-white" onclick="logout()">
+                <i class="fas fa-sign-out-alt me-1 text-white"></i>
+                Logout
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <div class="dashboard-header">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h1><i class="fas fa-tachometer-alt me-2"></i>Student Dashboard</h1>
+                    <p id="dashboardSubtitle">CSPDCL Vocational Training Online Exam System</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card exam-card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-play-circle"></i>
+                            <h5 class="card-title">Start Exam</h5>
+                            <p class="card-text">Enter your exam ID and start your examination</p>
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="mb-3">
+                                <label for="examIdInput" class="form-label">Exam ID:</label>
+                                <input type="text" 
+                                       class="form-control exam-id-input" 
+                                       id="examIdInput" 
+                                       placeholder="Enter your exam ID">
+                            </div>
+                            <button class="btn btn-light w-100" onclick="startExamWithId()">
+                                <i class="fas fa-play me-2"></i>Start Exam
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card result-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="flex-grow-1">
+                            <i class="fas fa-chart-bar"></i>
+                            <h5 class="card-title">My Results</h5>
+                            <p class="card-text">Check your exam results and track your performance</p>
+                        </div>
+                        <button class="btn btn-light mt-auto" onclick="viewResults()">
+                            <i class="fas fa-chart-line me-2"></i>View Results
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card profile-card h-100">
+                    <div class="card-body text-center d-flex flex-column">
+                        <div class="flex-grow-1">
+                            <i class="fas fa-user-cog"></i>
+                            <h5 class="card-title">Profile</h5>
+                            <p class="card-text">Manage your profile and view your statistics</p>
+                        </div>
+                        <button class="btn btn-light mt-auto" onclick="viewProfile()">
+                            <i class="fas fa-user me-2"></i>View Profile
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card activity-card">
+                    <div class="card-header bg-transparent">
+                        <h5 class="mb-0">
+                            <i class="fas fa-history me-2"></i>Recent Activity
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="recentActivity">
+                            <div class="text-center">
+                                <div class="spinner-border spinner-border-sm text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="text-muted mt-2">Loading recent activity...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card activity-card">
+                    <div class="card-header bg-transparent">
+                        <h5 class="mb-0">
+                            <i class="fas fa-bullhorn me-2"></i>Announcements
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info border-0 mb-0">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="fas fa-info-circle fa-2x text-info"></i>
+                                </div>
+                                <div>
+                                    <h6 class="alert-heading">Welcome to CSPDCL Vocational Training Online Exam System!</h6>
+                                    <p class="mb-0">
+                                        Make sure to complete your exams within the given time limit. 
+                                        Read all questions carefully before selecting your answers.
+                                        Good luck with your examinations!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5 py-4">
+        <div class="container text-center">
+            <p class="text-white-50 mb-0">
+                &copy; 2025 CSPDCL Vocational Training Online Exam System. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Webcam video element for proctoring -->
+    <video id="webcam" style="display: none;" autoplay></video>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="shared/student.js"></script>
+        
+    </script>
+</body>
+</html>

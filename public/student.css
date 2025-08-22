@@ -1,0 +1,181 @@
+body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dashboard-header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .dashboard-header h1 {
+            color: white;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+
+        .dashboard-header p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .exam-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .profile-card {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+
+        .exam-card .btn, .result-card .btn, .profile-card .btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .exam-card .btn:hover, .result-card .btn:hover, .profile-card .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .card-title i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .activity-card {
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .modal-content {
+            border-radius: 15px;
+            border: none;
+            backdrop-filter: blur(10px);
+        }
+
+        .question-container {
+            background: rgba(248, 249, 250, 0.8);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .question-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .form-check {
+            margin-bottom: 0.75rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+        }
+
+        .form-check:hover {
+            background-color: rgba(0, 123, 255, 0.1);
+        }
+
+        .form-check-input:checked {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .timer-display {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .badge {
+            font-size: 0.8rem;
+        }
+
+        .progress {
+            height: 10px;
+            border-radius: 5px;
+        }
+
+        .bg-light-success {
+            background-color: rgba(25, 135, 84, 0.1) !important;
+        }
+
+        .bg-light-danger {
+            background-color: rgba(220, 53, 69, 0.1) !important;
+        }
+
+        .table th {
+            border-top: none;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .btn-outline-primary:hover {
+            transform: scale(1.05);
+        }
+
+        .exam-item {
+            margin-bottom: 1rem;
+        }
+
+        .exam-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .exam-item .btn {
+            width: 100%;
+        }
+
+        #examsList {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-header {
+                padding: 1rem 0;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+            
+            .modal-dialog {
+                margin: 0.5rem;
+            }
+        }
