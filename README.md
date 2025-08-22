@@ -10,7 +10,7 @@ For amity hackthone
   - [Tausif Khan] – [Team Leader, Backend]  
   - [Sourabh Chandrakar] – [Backend]  
   - [Divyanshu Sahu] – [UI/UX and research]  
-  - [Member 4 Name] – [Role/Responsibility]  
+   
 
 ## Problem Statement
 > Online examinations often face challenges in maintaining academic integrity. Students may attempt to cheat using external resources, multiple devices, or by leaving the exam window. Existing solutions are either too complex, bandwidth-heavy, or not user-friendly.  
